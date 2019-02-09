@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div id="top-bar">
+    <a href="/"><img id="frame-setup1" src="/images/carousel-set-up-top.png" alt="frame-setup1" /></a>
+
+    {{#if login}}
+    <img id="login" src="/images/btn-login.png" onclick="document.getElementById('id01').style.display='block'">
+
+
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="/usuarios">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <img src="/images/user-green.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container-login">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#171719">
+          <a href="/admin" class="cancelbtn">Cancel</a>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+      {{/if}}
+
+      {{#if usuarios}}
+      <div id="usuario-name">
+        <h1>Hola, Usuario</h1>
+      </div>
+      {{/if}}
+
+      {{#if admin}}
+      <div id="admin-name">
+        <h1>Hola, Admin</h1>
+      </div>
+      {{/if}}
+    </div>
+
+  </div>
+
+
+  {{{body}}}
+
+
+  <div id="footer">
+    <img id="footer-setup" src="/images/footer.png" alt="footer-setup" />
+    <div id="footer-content">
+      <a href="#"><img id="mail" src="/images/mail.png" alt="mail" />
+        FITCONNECT@MAIL.COM
+      </a>
+    
+      <a href="#"><img id="facebook" src="/images/facebook.png" alt="facebook" />
+        WWW.FACEBOOK.COM/FITCONNECT
+      </a>
+    
+      <a href="#"><img id="ubication" src="/images/ubication.png" alt="ubication" />
+        AV. TECNOLÓGICO #1420 COL. TEC, MONTERREY, NUEVO LEÓN.
+      </a>
+    
+  </div>
+
+
+
+  {{!-- Add in jQuery --}}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/carousel.js"></script>
+  <script src="/js/log-in.js"></script>
+
+
+</body>
+
+</html>

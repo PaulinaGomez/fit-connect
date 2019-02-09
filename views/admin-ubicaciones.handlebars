@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-9 offset-1">
+            <h1>Encuentra tu centro mas cercano</h1>
+            <a href="/">← Back To Home</a>
+
+
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Direccion</th>
+                    </tr>
+                </thead>
+
+                {{#each Ubicacion}}
+
+                <tr class="col">
+                    <td>{{id}}</td>
+                    <td>{{nombre}}</td>
+                    <td>{{direccion}}</td>
+                </tr>
+
+                {{/each}}
+            </table>
+
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id='servicio' placeholder="Servicio">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id='costo' placeholder="Costo">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-success">Agregar</button>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,109 @@
+<div class="container-top">
+  
+  <div class="text-inicio">
+    <img src="/images/services-green.png">
+    <h2>Servicio - Crear Servicio</h2>
+
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Servicio</th>
+          <th scope="col">Ubicacion</th>
+          <th scope="col">Fecha Inicio</th>
+          <th scope="col">Fecha Final</th>
+
+        </tr>
+      </thead>
+
+      {{#each mainTable}}
+
+      <tr class="col fila-{{id}}">
+        <td>{{id}}</td>
+        <td contenteditable="true" class="usuario">{{this.Usuario.name}}</td>
+        <td contenteditable="true" class="servicio">{{this.Servicio.servicio}}</td>
+        <td contenteditable="true" class="ubicacion">{{this.Ubicacion.nombre}}</td>
+        <td contenteditable="true" class="fechaInicio">{{fechaInicio}}</td>
+        <td contenteditable="true" class="fechaFinal">{{fechaFinal}}</td>
+
+        <td>
+          <button type="submit" class="delete btn btn-danger" data-fila={{id}}>X</button>
+        </td>
+
+      </tr>
+
+      {{/each}}
+    </table>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <input class="new-item form-control" placeholder="Fecha inicio" type="text" id="inicio" />
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <input class="new-item form-control" placeholder="Fecha Fin" type="text" id="final" />
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <select class="custom-select" id="user"></select>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <select class="custom-select" id="servicio"></select>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <select class="custom-select" id="ubicacion"></select>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="col-2">
+    <button type="submit" class="agregar btn btn-success">Agregar</button>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/admin-usuarioAddDelServicio.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+  $(function () {
+    $("#inicio").datepicker();
+    $("#final").datepicker();
+  });
+</script>

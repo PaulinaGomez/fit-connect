@@ -1,0 +1,345 @@
+body {
+  background-color:#171719;
+  font-family: "Katahdin Round", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-dark {
+  background-color: #171719
+}
+
+#top-bar  {
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+#frame-setup1 {
+  justify-content: center;
+  width: 100%;
+  }
+
+#promos {
+  margin-top: 0%;
+}
+
+#frame-setup2 {
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 58%;
+  }
+
+#login{
+  order: 1;
+  justify-content: flex-end;
+  position: absolute;
+  top: 6%;
+  right: 7%;
+}
+
+#usuario-name {
+  display: inline-block;
+  order: 1;
+  justify-content: flex-end;
+  position: absolute;
+  top: 6%;
+  right: 7%;
+}
+
+#admin-name {
+  display: inline-block;
+  order: 1;
+  justify-content: flex-end;
+  position: absolute;
+  top: 6%;
+  right: 7%;
+}
+
+
+#footer {
+  width: 100%;
+  position: relative;
+}
+
+#footer-setup {
+  width: 100%;
+  position: relative;
+}
+
+#footer-content {
+  position: absolute;
+  bottom: 24%;
+  font-size: .9 rem;
+}
+
+.text-home  {
+  text-align: center;
+  color: #E1E3E6;
+  width: 31%;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: normal;
+}
+
+a {
+  color: #8CC63E;
+}
+
+a:visited {
+  color: #ffffff;
+}
+a:hover {
+  color: #ABB1B8;
+  text-decoration-line: none;
+}
+
+h1{
+  color: #8CC63E;
+  display: inline-block;
+  margin: 0;
+}
+
+h2{
+  color: #ffffff;
+}
+
+.container  {
+  align-items: center;
+  padding-top: 5%;
+}
+
+.text-inicio  {
+  display: inline-block;
+  align-items: center;
+  align-content: center;
+}
+
+/*falta ajustar posicion del btn*/
+#btn-servicios-usuario  {
+  display: flex;
+  align-content: flex-end;
+}
+
+.container-top  {
+  margin-top: 20%;
+}
+
+/* ***** CAROUSEL START **** */
+
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-position {
+  position: absolute;
+  top: 80%;
+  text-align: center;
+  right: 46%
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100%) {
+  .text {font-size: 11px}
+}
+
+/* ***** CAROUSEL END ****** */
+
+/* ****** LOG IN START****** */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  background-color: #171719;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 20%;
+}
+
+.container-login {
+  padding: 16px;
+  background-color: #171719;
+  color: #ffffff;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #171719;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 5px solid #8CC63E;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* ****** LOG IN END ****** */
