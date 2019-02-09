@@ -23,7 +23,6 @@ body {
 
 #promos {
   margin-top: 0%;
-  margin-bottom: -10%;
 }
 
 #frame-setup2 {
@@ -69,6 +68,7 @@ body {
 #footer-setup {
   width: 100%;
   position: relative;
+  padding-top: 3%;
 }
 
 #footer-content {
@@ -77,13 +77,24 @@ body {
   font-size: .9 rem;
 }
 
+#text-footer  {
+  text-align: center;
+}
+
+#footer-iconos {
+  text-align: center;
+  padding-bottom: 1%;
+}
+
 .text-home  {
   text-align: center;
   color: #E1E3E6;
-  width: 31%;
   font-size: 1rem;
   display: inline-block;
   font-weight: normal;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -114,7 +125,7 @@ h2{
 }
 
 .text-inicio  {
-  display: inline-block;
+  
   align-items: center;
   align-content: center;
 }
@@ -127,6 +138,25 @@ h2{
 
 .container-top  {
   margin-top: 20%;
+}
+
+table{
+  width: 100%;
+}
+
+#tabla-iconos {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+#tabla-servicios  {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+#tabla-espacio  {
+  width: 3%;
 }
 
 /* ***** CAROUSEL START **** */
@@ -342,41 +372,10 @@ span.psw {
      width: 100%;
   }
 }
-.centrado{
-  margin-left:auto; 
-  margin-right:auto;
-}
-
-.letraBlanca {
-  color: white;
-  text-align: center;
-}
-
-.titulos {
-  text-align: center;
-  color: rgb(45, 245, 55);
-}
-
-.iconos{
-  text-align: center;
-}
-
-.top {
-  margin-top: 0px;
-}
-
-#footer-content {
-  margin-left: 10%;
-}
-
-#margen {
-  margin-left: 30%;
-}
-
-#admin-main {
-  margin-left: 7%;
-}
-
-
 
 /* ****** LOG IN END ****** */
+
+@font-face {
+  font-family: Katahdin Round;
+  src: url(KatahdinRound.otf);
+}

@@ -31,15 +31,35 @@
   <div class="text-inicio">
     <img src="/images/services-green.png">
     <h1>Servicios - Por Vencer</h1>
-    
-    {{ServiciosPorVencer}}
-    
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Id servicio</th>
+          <th scope="col">Fecha a vencer</th>
+
+
+        </tr>
+      </thead>
+
+      {{#each mainTable}}
+
+      <tr class="col fila-{{id}}">
+        <td contenteditable="true" class="nombre">{{UsuarioId}}</td>
+        <td contenteditable="true" class="correo">{{ServicioId}}</td>
+        <td contenteditable="true" class="telefono">{{fechaFinal}}</td>
+      </tr>
+      {{/each}}
+
+    </table>
+
   </div>
 
 </div>
 
 <div id="btn-servicios-usuario">
-<a href="/usuario/maintable/2">
-<img src="/images/btn-servicios.png">
-</a>
+  <a href="/usuario/maintable/2">
+    <img src="/images/btn-servicios.png">
+  </a>
 </div>
