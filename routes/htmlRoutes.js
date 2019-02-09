@@ -12,20 +12,20 @@ module.exports = function (app) {
   });
 
   // esta ruta carga un hbs template, NO TRAE INFORMACION done
-  app.get("/usuarios/:id", function (req, res) {
+  app.get("/usuarios/", function (req, res) {
     //funcion para agregar datos de usuario con servicios por vencer
     db.mainTable.findAll({
       where: {
         UsuarioId: req.params.id,
       },
-      fechaFinal: {
-        $gte: moment().subtract(7, 'days').toDate()
-      }
+      // fechaFinal: {
+      //   $gte: moment().subtract(7, 'days').toDate()
+      // }
   }).then(function (dbmainTable) {
-    console.log(dbmainTable);
+    // console.log(dbmainTable);
 
     res.render("usuario-main", {
-      mainTable: dbmainTable,
+      // mainTable: dbmainTable,
       usuarios: true
     });
   });

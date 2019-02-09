@@ -1,59 +1,68 @@
 <div class="container-top">
-    <div class="container" id="margen">
-    <div class="text-inicio">
-        <img src="/images/user-green.png">
-        <h2>Usuarios - Editar Usuarios</h2>
-        <br>
-        <a href="/">← Back To Home</a>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col"></th>
-
-                </tr>
-            </thead>
-
-            {{#each datos}}
-
-            <tr class="col fila-{{id}}">
-                <td>{{id}}</td>
-                <td contenteditable="true" class="nombre">{{name}}</td>
-                <td contenteditable="true" class="correo">{{correo}}</td>
-                <td contenteditable="true" class="telefono">{{telefono}}</td>
-                <td><button type="submit" class="editar btn btn-success" data-fila={{id}}>Editar</button></td>
-               
+    <div class="container" id="margen3">
+    <table>
+        <tr>
+            <th class="text-inicio">
+                <img src="/images/user-green.png">
+            </th>
+            <th>
+                <h1>Usuarios - Editar Usuarios</h1>
+                <br>
+       <a href="/">← Back To Home</a>
+            </th>
+        </tr>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col"></th>
             </tr>
-            {{/each}}
-
-        </table>
-    </div>
-
-    <div><br></div>
-    <div class="text-inicio">
-        <img src="/images/user-green.png">
-        <h2>Usuarios - Crear Usuario</h2>
-        <form>
-            <div class="row">
-                <div class="col">
-                    <input id="nombre" type="text" class="form-control" placeholder="Nombre">
-                </div>
-                <div class="col">
-                    <input id="correo" type="text" class="form-control" placeholder="Correo">
-                </div>
-                <div class="col">
-                    <input id="telefono" type="text" class="form-control" placeholder="Telefono">
-                </div>
-                <div class="col">
-                    <button id="submit" type="submit" class="btn btn-success">Agregar</button>
-                </div>
+        </thead>
+        {{#each datos}}
+        <tr class="col fila-{{id}}">
+            <td>{{id}}</td>
+            <td contenteditable="true" class="nombre">{{name}}</td>
+            <td contenteditable="true" class="correo">{{correo}}</td>
+            <td contenteditable="true" class="telefono">{{telefono}}</td>
+            <td><button type="submit" class="editar btn btn-success" data-fila={{id}}>Editar</button></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<div><br></div>
+       
+    <table>
+        <tr>
+            <th class="text-inicio">
+                <img src="/images/user-green.png">
+            </th>
+            <th>
+                <h1>Usuarios - Crear Usuario</h1>
+            </th>
+        </tr>
+    </table>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input id="nombre" type="text" class="form-control" placeholder="Nombre">
             </div>
-        </form>
-    </div>
-    </div>
+            <div class="col">
+                <input id="correo" type="text" class="form-control" placeholder="Correo">
+            </div>
+            <div class="col">
+                <input id="telefono" type="text" class="form-control" placeholder="Telefono">
+            </div>
+            <div class="col">
+                <button id="submit" type="submit" class="btn btn-success">Agregar</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

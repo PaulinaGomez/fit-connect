@@ -379,3 +379,16 @@ span.psw {
   font-family: Katahdin Round;
   src: url(KatahdinRound.otf);
 }
+
+.centrado{
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+#editar2 {
+  margin-left: 5%;
+}
+
+#margen2 {
+  margin-left: 12%;
+}
