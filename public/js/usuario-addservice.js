@@ -62,7 +62,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     let id = $(this).data("fila");
-    debugger;
+    // debugger;
     var deletedServicio = {
       id: id,
     };

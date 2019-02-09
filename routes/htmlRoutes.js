@@ -2,7 +2,7 @@ var db = require("../models");
 var moment = require("moment");
 
 module.exports = function (app) {
-  // Load index page
+  // Load index page done
   app.get("/", function (req, res) {
     db.Usuarios.findAll({}).then(function (dbUsuarios) {
       res.render("index", {
@@ -11,6 +11,7 @@ module.exports = function (app) {
     });
   });
 
+  // esta ruta carga un hbs template, NO TRAE INFORMACION done
   app.get("/usuarios", function (req, res) {
     //funcion para agregar datos de usuario con servicios por vencer
     db.Usuarios.findAll({}).then(function (dbUsuarios) {
@@ -22,7 +23,7 @@ module.exports = function (app) {
 
   //funciones usuario/servicios
 
-//RENDER USUARIOS
+//RENDER USUARIOS done
 app.get("/usuario/maintable/:id", function (req, res) {
   db.mainTable.findAll({
     where: {
@@ -40,7 +41,7 @@ app.get("/usuario/maintable/:id", function (req, res) {
 
 
 
-  // carga raiz admin-usuarios
+  // carga raiz admin-usuarios done
   app.get("/admin/usuarios", function (req, res) {
     db.Usuarios.findAll({}).then(function (
       dbUsuarios
@@ -52,6 +53,7 @@ app.get("/usuario/maintable/:id", function (req, res) {
     });
   });
 
+  // done
   app.get("/admin", function (req, res) {
     db.mainTable.findAll({
       where: {
@@ -71,7 +73,7 @@ app.get("/usuario/maintable/:id", function (req, res) {
     });
   });
 
-  // carga raiz admin-servicios
+  // carga raiz admin-servicios done
   app.get("/admin/servicios", function (req, res) {
     db.Servicios.findAll({}).then(function (
       dbServicios) {
@@ -83,7 +85,7 @@ app.get("/usuario/maintable/:id", function (req, res) {
   });
 
 
-  //carga admin, agrega y elimina servicio al usuario
+  //carga admin, agrega y elimina servicio al usuario done
   app.get("/admin/servicios/addDel", function (req, res) {
     db.mainTable.findAll({
       include: [

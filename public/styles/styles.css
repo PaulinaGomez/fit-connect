@@ -23,6 +23,7 @@ body {
 
 #promos {
   margin-top: 0%;
+  margin-bottom: -10%;
 }
 
 #frame-setup2 {
@@ -341,5 +342,41 @@ span.psw {
      width: 100%;
   }
 }
+.centrado{
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.letraBlanca {
+  color: white;
+  text-align: center;
+}
+
+.titulos {
+  text-align: center;
+  color: rgb(45, 245, 55);
+}
+
+.iconos{
+  text-align: center;
+}
+
+.top {
+  margin-top: 0px;
+}
+
+#footer-content {
+  margin-left: 10%;
+}
+
+#margen {
+  margin-left: 30%;
+}
+
+#admin-main {
+  margin-left: 7%;
+}
+
+
 
 /* ****** LOG IN END ****** */

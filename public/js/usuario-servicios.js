@@ -18,7 +18,7 @@ $(document).ready(function () {
       url: "api/usuarios/servicios",
       data: JSON.stringify(newService)
     });
-  }
+  });
 
 
 
@@ -49,4 +49,4 @@ $(document).ready(function () {
 
   // });
 
-})
+});
