@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "*InuYasha10",
+    "password": null,
     "database": "fitconnection",
     "host": "localhost",
     "dialect": "mysql",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "*InuYasha10",
+    "password": null,
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
