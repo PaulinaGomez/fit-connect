@@ -61,7 +61,7 @@ $(".delete").on("click", function(event) {
   event.preventDefault();
 
   let id = $(this).data("fila");
-  // debugger;
+  debugger;
     var deletedServicio = {
       id: id,
     };

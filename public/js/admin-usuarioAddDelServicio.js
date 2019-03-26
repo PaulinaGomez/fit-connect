@@ -3,6 +3,8 @@ $(document).ready(function () {
     $(".agregar").on("click", function (event) {
         event.preventDefault();
 
+
+
         function validateForm() {
             var isValid = true;
 
@@ -48,8 +50,11 @@ $(document).ready(function () {
 
                 $.get("/api/admin/AddDelServUser", userData)
                 // on success, run this callback
-                .then(function (data) {                                        
-                    
+                .then(function (data) {
+                    // log the data we found
+
+                    // tell the user we're adding a character with an alert window
+                    alert("Agregando Servicio...");
                     location.reload();
                 });
 
@@ -69,7 +74,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         let id = $(this).data("fila");
-        // debugger;
+        debugger;
         var deletedServicio = {
             id: id,
         };
