@@ -1,5 +1,4 @@
 <div class="container-top">
-    <div class="container" id="margen3">
     <table>
         <tr>
             <th class="text-inicio">
@@ -7,11 +6,10 @@
             </th>
             <th>
                 <h1>Usuarios - Editar Usuarios</h1>
-                <br>
-       <a href="/">← Back To Home</a>
             </th>
         </tr>
     </table>
+
     <table class="table table-dark">
         <thead>
             <tr>
@@ -20,19 +18,25 @@
                 <th scope="col">Correo</th>
                 <th scope="col">Telefono</th>
                 <th scope="col"></th>
+
             </tr>
         </thead>
+
         {{#each datos}}
+
         <tr class="col fila-{{id}}">
             <td>{{id}}</td>
             <td contenteditable="true" class="nombre">{{name}}</td>
             <td contenteditable="true" class="correo">{{correo}}</td>
             <td contenteditable="true" class="telefono">{{telefono}}</td>
             <td><button type="submit" class="editar btn btn-success" data-fila={{id}}>Editar</button></td>
+
         </tr>
         {{/each}}
+
     </table>
 </div>
+
 <div><br></div>
        
     <table>
@@ -45,6 +49,7 @@
             </th>
         </tr>
     </table>
+
     <form>
         <div class="row">
             <div class="col">
@@ -61,7 +66,6 @@
             </div>
         </div>
     </form>
-</div>
 </div>
 </div>
 

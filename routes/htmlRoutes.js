@@ -2,7 +2,7 @@ var db = require("../models");
 var moment = require("moment");
 
 module.exports = function (app) {
-  // Load index page done
+  // Load index page
   app.get("/", function (req, res) {
     db.Usuarios.findAll({}).then(function (dbUsuarios) {
       res.render("index", {
@@ -11,29 +11,18 @@ module.exports = function (app) {
     });
   });
 
-  // esta ruta carga un hbs template, NO TRAE INFORMACION done
-  app.get("/usuarios/", function (req, res) {
+  app.get("/usuarios", function (req, res) {
     //funcion para agregar datos de usuario con servicios por vencer
-    db.mainTable.findAll({
-      where: {
-        UsuarioId: req.params.id,
-      },
-      // fechaFinal: {
-      //   $gte: moment().subtract(7, 'days').toDate()
-      // }
-  }).then(function (dbmainTable) {
-    // console.log(dbmainTable);
-
-    res.render("usuario-main", {
-      // mainTable: dbmainTable,
-      usuarios: true
+    db.Usuarios.findAll({}).then(function (dbUsuarios) {
+      res.render("usuario-main", {
+        usuarios: true,
+      });
     });
   });
-});
 
-//funciones usuario/servicios
+  //funciones usuario/servicios
 
-//RENDER USUARIOS done
+//RENDER USUARIOS
 app.get("/usuario/maintable/:id", function (req, res) {
   db.mainTable.findAll({
     where: {
@@ -51,64 +40,63 @@ app.get("/usuario/maintable/:id", function (req, res) {
 
 
 
-// carga raiz admin-usuarios done
-app.get("/admin/usuarios", function (req, res) {
-  db.Usuarios.findAll({}).then(function (
-    dbUsuarios
-  ) {
-    res.render("admin-usuarios", {
-      admin: true,
-      datos: dbUsuarios
+  // carga raiz admin-usuarios
+  app.get("/admin/usuarios", function (req, res) {
+    db.Usuarios.findAll({}).then(function (
+      dbUsuarios
+    ) {
+      res.render("admin-usuarios", {
+        admin: true,
+        datos: dbUsuarios
+      });
     });
   });
-});
 
-// done
-app.get("/admin", function (req, res) {
-  db.mainTable.findAll({
-    where: {
-      fechaFinal: {
-        $gte: moment().subtract(7, 'days').toDate()
+  app.get("/admin", function (req, res) {
+    db.mainTable.findAll({
+      where: {
+        fechaFinal: {
+          $gte: moment().subtract(7, 'days').toDate()
+        }
       }
-    }
-  }).then(function (
-    dbmainTable
-  ) {
-    console.log(dbmainTable);
+    }).then(function (
+      dbmainTable
+    ) {
+      console.log(dbmainTable);
 
-    res.render("admin-main", {
-      mainTable: dbmainTable,
-      admin: true
+      res.render("admin-main", {
+        mainTable: dbmainTable,
+        admin: true
+      });
     });
   });
-});
 
-// carga raiz admin-servicios done
-app.get("/admin/servicios", function (req, res) {
-  db.Servicios.findAll({}).then(function (
-    dbServicios) {
-    res.render("admin-serviciosFinal", {
-      admin: true,
-      servicios: dbServicios
+  // carga raiz admin-servicios
+  app.get("/admin/servicios", function (req, res) {
+    db.Servicios.findAll({}).then(function (
+      dbServicios) {
+      res.render("admin-serviciosFinal", {
+        admin: true,
+        servicios: dbServicios
+      });
     });
   });
-});
 
 
-//carga admin, agrega y elimina servicio al usuario done
-app.get("/admin/servicios/addDel", function (req, res) {
-  db.mainTable.findAll({
-    include: [
-      db.Servicios, db.Ubicacion, db.Usuarios
-    ]
-  }).then(function (dbmainTable) {
-    console.log(dbmainTable);
-    res.render("admin-serviciosAddDelete", {
-      admin: true,
-      mainTable: dbmainTable
+  //carga admin, agrega y elimina servicio al usuario
+  app.get("/admin/servicios/addDel", function (req, res) {
+    db.mainTable.findAll({
+      include: [
+        db.Servicios, db.Ubicacion, db.Usuarios
+      ]
+    }).then(function (dbmainTable) {
+      console.log(dbmainTable);
+      res.render("admin-serviciosAddDelete", {
+        admin: true,
+        mainTable: dbmainTable
+      });
     });
   });
-});
 
 
 
@@ -116,8 +104,8 @@ app.get("/admin/servicios/addDel", function (req, res) {
 
 
 
-// Render 404 page for any unmatched routes
-app.get("*", function (req, res) {
-  res.render("404");
-});
+  // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 };
